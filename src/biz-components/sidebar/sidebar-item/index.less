@@ -1,0 +1,26 @@
+@import "@/style/variable.less";
+
+.fishDesign-sidebar-item {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  border-right: 2px solid #efefef;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  &.fishDesign-sidebar-item-selected {
+    border-right: 2px solid @fishBlue;
+    background-color: fade(
+      @fishBlue,
+      10%
+    );
+    color: @fishBlue;
+  }
+  .fishDesign-sidebar-item-subname {
+    margin-left: 10px;
+  }
+}

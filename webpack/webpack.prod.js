@@ -14,10 +14,9 @@ module.exports = merge(common, {
       filename:'fishstar.css'
     }),
   ],
-  optimization:{
-    splitChunks:{
-      chunks:"all"
-
-    },
-  }
+  // optimization:{
+  //   splitChunks:{
+  //     chunks:"all"
+  //   },
+  // }
 });

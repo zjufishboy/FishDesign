@@ -1,10 +1,24 @@
 import React from 'react';
-import './app.less';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route, Redirect
+} from "react-router-dom";
 
-export const App:React.FC=()=>{
-    return(
-        <div>
-            这是首页
-        </div>
-    )
+import './app.less';
+import { Dashboard } from './pages/dashboard';
+
+export const App: React.FC = () => {
+    return (
+        <Router>
+            <Switch>
+                <Route path="/" exact>
+                    <Redirect to="/components/button"/>
+                </Route>
+                <Route path="/components/:name" exact>
+                <Dashboard />
+                </Route>
+            </Switch>
+        </Router>
+    );
 }

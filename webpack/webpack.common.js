@@ -2,9 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.tsx",
+    entry: "./src/entry/index.tsx",
     output: {
-        filename: "fishstar-[hash:8].js",
+        filename: "fish-design.js",
         path: path.resolve(
             __dirname,
             "../dist"
@@ -13,7 +13,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html",
+            template: "./src/entry/index.html",
+            favicon:path.resolve(__dirname,'../src/assets/fishDesign.svg')
         }),
     ],
     resolve: {
