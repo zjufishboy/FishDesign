@@ -1,0 +1,22 @@
+@import "@/style/variable.less";
+
+.fish-btn {
+  border-radius: 2px;
+  border: 1px solid;
+  padding: 4px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &-primary {
+    background-color: @fishBlue;
+    border-color: @fishBlue;
+  }
+  &-default {
+    background-color: @fishDarkBlue;
+    border-color: @fishDarkBlue;
+    color: white;
+    &:hover {
+      background-color: @fishLightBlue;
+      border-color: @fishLightBlue;
+    }
+  }
+}
